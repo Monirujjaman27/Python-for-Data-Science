@@ -1,11 +1,14 @@
 import pandas as pd
-data = pd.read_csv("percent_bachelors_degrees_women_usa.csv")
-# print(data.iloc[15])
 data = pd.DataFrame({
-    'a1':[1,2,3],
-    'a2':[4,5,6],
-    'a3':[7,8,9],
-},index=['x','y','z'])
-print(data)
+    'name': ['moner','fahim','tushar','tanvir','tuhin'],
+    'age':[10,20,30,40,50],
+    'salary':[20000,21000,22000,23000,2400],
+    'department':['tach','hr','sales','hr','tach']
+})
+# print(data.sort_values(by='age',ascending=True))
+# print(data.groupby('department')['salary'].mean())
+# print(data.groupby('department')['salary'].min())
+# print(data.groupby('department')['salary'].max())
+print(data.groupby('department')['age'].mean())
 
-print(data.loc['x'])
+# print(data.min)
